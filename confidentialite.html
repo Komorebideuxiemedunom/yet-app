@@ -10,10 +10,10 @@
 <main>
 <p class="back"><a href="index.html">← YET</a> · <a href="privacy.html">English</a></p>
 <h1>Politique de confidentialité</h1>
-<p class="meta">Application YET (bucket list) · en vigueur le 29 septembre 2026</p>
+<p class="meta">Application YET (bucket list) · en vigueur le 30 septembre 2026 (version 1.12 et suivantes)</p>
 
 <h2>En bref</h2>
-<p>Ta liste, tes souvenirs et tes photos restent sur ton iPhone et, si tu l'actives, dans <strong>ton propre iCloud</strong>. YET n'a pas de compte utilisateur et n'envoie rien à un serveur appartenant à l'éditeur de l'app.</p>
+<p>Ta liste, tes souvenirs et tes photos restent sur ton iPhone et, si tu l'actives, dans <strong>ton propre iCloud</strong>. YET n'a pas de compte utilisateur. La version gratuite affiche des publicités (Google AdMob) : tu choisis si elles peuvent être personnalisées. YET+ retire toutes les publicités.</p>
 
 <h2>Ce que l'app enregistre</h2>
 <ul>
@@ -21,28 +21,47 @@
 <li><strong>Les clés API d'IA</strong> que tu saisis : dans le trousseau de l'iPhone, jamais transmises à l'éditeur.</li>
 </ul>
 
+<h2>Listes partagées</h2>
+<p>Quand tu crées une liste partagée, elle est stockée dans ton iCloud et partagée par Apple (partage iCloud) avec les personnes que tu invites. Elles voient le nom de la liste, ses envies, qui les a ajoutées ou faites, et les prénoms que chacun a dans iCloud. Tu peux supprimer la liste pour tout le monde, et un invité peut la quitter. L'éditeur n'y a pas accès.</p>
+
 <h2>Autorisations (toutes facultatives)</h2>
 <ul>
 <li><strong>Position approximative</strong> : pour la météo, l'heure du soleil et trouver de vrais lieux autour de toi (Plans d'Apple). Elle n'est ni enregistrée ni partagée par l'app ; les recherches de lieux et la météo sont traitées par Apple (Plans, Météo) selon leurs propres conditions.</li>
+<li><strong>Position « Toujours »</strong>, seulement si tu actives l'alerte « tout près » : ton iPhone surveille lui-même des zones autour des lieux de tes plans et te prévient quand tu en approches. La surveillance se fait sur l'iPhone ; aucune position n'est envoyée ni enregistrée ailleurs.</li>
 <li><strong>Agenda</strong> : lu sur l'iPhone pour repérer tes créneaux libres. Rien n'est envoyé ni modifié.</li>
-<li><strong>Notifications</strong> : rappels et phrases motivantes, programmés sur l'iPhone.</li>
+<li><strong>Notifications</strong> : rappels, phrases motivantes et alertes « tout près », programmés sur l'iPhone.</li>
 <li><strong>Photos</strong> : seules celles que tu choisis pour un souvenir sont copiées dans l'app.</li>
+<li><strong>Suivi publicitaire</strong> (demande d'Apple « Autoriser le suivi ») : voir « Publicité » ci-dessous.</li>
 </ul>
 
 <h2>Intelligence artificielle</h2>
 <ul>
-<li><strong>Apple Intelligence</strong> (iPhones compatibles) : fonctionne sur l'iPhone.</li>
-<li><strong>IA avec ta propre clé</strong> (Claude, ChatGPT, Gemini, Mistral, Groq, Grok, DeepSeek, OpenRouter) : seulement si tu ajoutes une clé. Tes questions à Sol et le contexte nécessaire (tes envies, ta ville approximative, la météo) sont alors envoyés directement au fournisseur que tu as choisi, selon ses propres conditions. L'éditeur ne les voit pas.</li>
+<li><strong>Règles embarquées, Apple Intelligence</strong> (iPhones compatibles) <strong>et mini-Sol</strong> : fonctionnent entièrement sur l'iPhone. Le mini-Sol est un modèle d'IA que tu peux télécharger (depuis GitHub) et supprimer à tout moment ; le téléchargement est la seule connexion qu'il nécessite.</li>
+<li><strong>Sol+ (abonnés YET+)</strong> : tes questions à Sol et le contexte nécessaire (tes envies, ta ville approximative, la météo) sont envoyés au serveur de YET, hébergé par Cloudflare, puis au modèle d'IA qui répond (Cloudflare Workers AI ou Anthropic). La demande est accompagnée de la preuve d'achat signée par l'App Store, pour vérifier l'abonnement. Le serveur n'enregistre ni tes questions ni ses réponses : il garde seulement un compteur de demandes par jour et par abonnement, effacé au bout de deux jours.</li>
+<li><strong>IA avec ta propre clé</strong> (Claude, ChatGPT, Gemini, Mistral, Groq, Grok, DeepSeek, OpenRouter) : seulement si tu ajoutes une clé. Les mêmes informations sont alors envoyées directement au fournisseur que tu as choisi, selon ses propres conditions. L'éditeur ne les voit pas.</li>
 </ul>
+<p>Quel que soit le moteur, un garde-fou sur l'iPhone bloque les contenus dangereux ; en cas de détresse, Sol donne les numéros d'aide (3114, 112).</p>
+
+<h2>Publicité (version gratuite)</h2>
+<p>La version gratuite affiche des bannières fournies par <strong>Google AdMob</strong>. Pour les afficher, le SDK de Google collecte des informations techniques sur l'appareil et l'usage (modèle, système, adresse IP, interactions avec les pubs) et, seulement si tu l'autorises, l'identifiant publicitaire de l'iPhone.</p>
+<ul>
+<li>En Europe, un message de consentement de Google (RGPD) te demande d'abord si les publicités peuvent être personnalisées. Tu peux changer d'avis à tout moment dans les réglages de Sol (« Choix de confidentialité des pubs »).</li>
+<li>La demande d'Apple « Autoriser le suivi » décide de l'accès à l'identifiant publicitaire. Si tu refuses, tu vois simplement des pubs moins ciblées.</li>
+<li>Tes envies, ta liste, tes souvenirs et ta position ne sont <strong>jamais</strong> transmis à Google ni utilisés pour la publicité.</li>
+</ul>
+<p>Voir la <a href="https://policies.google.com/technologies/partner-sites">politique de Google sur ses partenaires</a>.</p>
+
+<h2>Abonnement YET+</h2>
+<p>L'abonnement (0,99 € par mois) est géré entièrement par Apple : l'éditeur ne reçoit ni ton nom ni tes coordonnées bancaires. L'app vérifie l'abonnement auprès de l'App Store sur l'iPhone. YET+ retire les publicités et donne accès à Sol+.</p>
 
 <h2>Partage</h2>
-<p>L'éditeur ne vend, ne loue et ne partage aucune donnée. Rien n'est collecté à des fins publicitaires dans cette version.</p>
+<p>L'éditeur ne vend, ne loue et ne partage aucune donnée personnelle. Les seuls tiers qui en traitent sont ceux décrits ci-dessus (Apple, Google AdMob pour la version gratuite, Cloudflare et le modèle d'IA pour Sol+, et le fournisseur d'IA que tu choisis avec ta propre clé).</p>
 
 <h2>Tes droits</h2>
-<p>Tu peux tout effacer à tout moment : supprime des envies dans l'app, supprime l'app, et gère les données iCloud dans Réglages → [ton nom] → iCloud. Pour toute question, voir la <a href="index.html">page d'assistance</a>.</p>
+<p>Tu peux tout effacer à tout moment : supprime des envies dans l'app, supprime le mini-Sol dans les réglages de Sol, supprime l'app, et gère les données iCloud dans Réglages → [ton nom] → iCloud. Tu peux retirer ton consentement publicitaire dans les réglages de Sol et le suivi dans Réglages → Confidentialité et sécurité → Suivi. Pour toute question, voir la <a href="index.html">page d'assistance</a>.</p>
 
 <h2>Évolutions</h2>
-<p>Cette politique sera mise à jour avant toute évolution qui changerait l'usage des données (par exemple de la publicité dans la version gratuite), et la date ci-dessus changera.</p>
+<p>Cette politique sera mise à jour avant toute évolution qui changerait l'usage des données, et la date ci-dessus changera.</p>
 </main>
 </body>
 </html>

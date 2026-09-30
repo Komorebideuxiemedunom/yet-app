@@ -10,39 +10,58 @@
 <main>
 <p class="back"><a href="index.html">← YET</a> · <a href="confidentialite.html">Français</a></p>
 <h1>Privacy Policy</h1>
-<p class="meta">YET (bucket list app) · effective September 29, 2026</p>
+<p class="meta">YET app (bucket list) · effective 30 September 2026 (version 1.12 and later)</p>
 
 <h2>In short</h2>
-<p>Your list, memories and photos stay on your iPhone and, if you turn it on, in <strong>your own iCloud</strong>. YET has no user accounts and sends nothing to servers owned by the app's publisher.</p>
+<p>Your list, memories and photos stay on your iPhone and, if you turn it on, in <strong>your own iCloud</strong>. YET has no user accounts. The free version shows ads (Google AdMob): you choose whether they can be personalised. YET+ removes all ads.</p>
 
 <h2>What the app stores</h2>
 <ul>
-<li><strong>Your dreams, plans, memories, photos and settings</strong>: on your iPhone, and in your Apple account's private iCloud database if iCloud sync is on. The publisher cannot access them.</li>
+<li><strong>Your dreams, plans, memories, photos and settings</strong>: on your iPhone, and in the private iCloud database of your Apple Account if iCloud sync is on. The publisher has no access to them.</li>
 <li><strong>AI API keys</strong> you enter: in the iPhone keychain, never sent to the publisher.</li>
 </ul>
 
+<h2>Shared lists</h2>
+<p>When you create a shared list, it is stored in your iCloud and shared by Apple (iCloud sharing) with the people you invite. They see the list's name, its dreams, who added or completed them, and the first names each member has in iCloud. You can delete the list for everyone, and a guest can leave it. The publisher has no access to it.</p>
+
 <h2>Permissions (all optional)</h2>
 <ul>
-<li><strong>Approximate location</strong>: for weather, sun times and finding real places around you (Apple Maps). The app doesn't store or share it; place searches and weather are handled by Apple (Maps, Weather) under their own terms.</li>
-<li><strong>Calendar</strong>: read on the iPhone to find free time. Nothing is sent or changed.</li>
-<li><strong>Notifications</strong>: reminders and motivational messages, scheduled on the iPhone.</li>
+<li><strong>Approximate location</strong>: for the weather, sunrise and sunset times, and finding real places around you (Apple Maps). The app neither stores nor shares it; place searches and weather are handled by Apple (Maps, Weather) under their own terms.</li>
+<li><strong>"Always" location</strong>, only if you turn on the "nearby" alert: your iPhone itself monitors areas around the places in your plans and lets you know when you get close. Monitoring happens on the iPhone; no location is sent or stored anywhere else.</li>
+<li><strong>Calendar</strong>: read on the iPhone to find your free slots. Nothing is sent or changed.</li>
+<li><strong>Notifications</strong>: reminders, motivational lines and "nearby" alerts, scheduled on the iPhone.</li>
 <li><strong>Photos</strong>: only the ones you pick for a memory are copied into the app.</li>
+<li><strong>Ad tracking</strong> (Apple's "Allow tracking" prompt): see "Advertising" below.</li>
 </ul>
 
 <h2>Artificial intelligence</h2>
 <ul>
-<li><strong>Apple Intelligence</strong> (compatible iPhones): runs on the iPhone.</li>
-<li><strong>AI with your own key</strong> (Claude, ChatGPT, Gemini, Mistral, Groq, Grok, DeepSeek, OpenRouter): only if you add a key. Your questions to Sol and the context they need (your dreams, approximate city, weather) are then sent directly to the provider you chose, under its own terms. The publisher never sees them.</li>
+<li><strong>Built-in rules, Apple Intelligence</strong> (compatible iPhones) <strong>and Mini-Sol</strong>: run entirely on your iPhone. Mini-Sol is an AI model you can download (from GitHub) and delete at any time; the download is the only connection it needs.</li>
+<li><strong>Sol+ (YET+ subscribers)</strong>: your questions to Sol and the context needed (your dreams, approximate city, weather) are sent to YET's server, hosted by Cloudflare, then to the AI model that answers (Cloudflare Workers AI or Anthropic). The request includes the App Store's signed proof of purchase so the subscription can be checked. The server does not store your questions or its answers: it only keeps a daily request counter per subscription, deleted after two days.</li>
+<li><strong>AI with your own key</strong> (Claude, ChatGPT, Gemini, Mistral, Groq, Grok, DeepSeek, OpenRouter): only if you add a key. The same information is then sent directly to the provider you chose, under its own terms. The publisher never sees it.</li>
 </ul>
+<p>Whatever the engine, a safeguard on the iPhone blocks dangerous content; if you are in distress, Sol gives helpline numbers.</p>
+
+<h2>Advertising (free version)</h2>
+<p>The free version shows banners provided by <strong>Google AdMob</strong>. To show them, Google's SDK collects technical information about the device and usage (model, system, IP address, ad interactions) and, only if you allow it, the iPhone's advertising identifier.</p>
+<ul>
+<li>In Europe, a Google consent message (GDPR) first asks whether ads may be personalised. You can change your mind at any time in Sol's settings ("Ad privacy choices").</li>
+<li>Apple's "Allow tracking" prompt decides access to the advertising identifier. If you decline, you simply see less targeted ads.</li>
+<li>Your dreams, list, memories and location are <strong>never</strong> sent to Google or used for advertising.</li>
+</ul>
+<p>See <a href="https://policies.google.com/technologies/partner-sites">Google's policy on partner apps</a>.</p>
+
+<h2>YET+ subscription</h2>
+<p>The subscription (€0.99 per month) is handled entirely by Apple: the publisher receives neither your name nor your payment details. The app checks the subscription with the App Store on the iPhone. YET+ removes ads and gives access to Sol+.</p>
 
 <h2>Sharing</h2>
-<p>The publisher does not sell, rent or share any data. Nothing is collected for advertising in this version.</p>
+<p>The publisher does not sell, rent or share any personal data. The only third parties that process any are those described above (Apple; Google AdMob for the free version; Cloudflare and the AI model for Sol+; and the AI provider you choose with your own key).</p>
 
 <h2>Your rights</h2>
-<p>You can delete everything at any time: delete dreams in the app, delete the app, and manage iCloud data in Settings → [your name] → iCloud. For questions, see the <a href="index.html">support page</a>.</p>
+<p>You can erase everything at any time: delete dreams in the app, delete Mini-Sol in Sol's settings, delete the app, and manage iCloud data in Settings → [your name] → iCloud. You can withdraw ad consent in Sol's settings and tracking in Settings → Privacy &amp; Security → Tracking. For any question, see the <a href="index.html">support page</a>.</p>
 
 <h2>Changes</h2>
-<p>This policy will be updated before any change in how data is used (for example ads in the free version), and the date above will change.</p>
+<p>This policy will be updated before any change that would affect how data is used, and the date above will change.</p>
 </main>
 </body>
 </html>
