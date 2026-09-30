@@ -38,7 +38,7 @@
 <h2>Intelligence artificielle</h2>
 <ul>
 <li><strong>Règles embarquées, Apple Intelligence</strong> (iPhones compatibles) <strong>et mini-Sol</strong> : fonctionnent entièrement sur l'iPhone. Le mini-Sol est un modèle d'IA que tu peux télécharger (depuis GitHub) et supprimer à tout moment ; le téléchargement est la seule connexion qu'il nécessite.</li>
-<li><strong>Sol+ (abonnés YET+)</strong> : tes questions à Sol et le contexte nécessaire (tes envies, ta ville approximative, la météo) sont envoyés au serveur de YET, hébergé par Cloudflare, puis au modèle d'IA qui répond (Cloudflare Workers AI ou Anthropic). La demande est accompagnée de la preuve d'achat signée par l'App Store, pour vérifier l'abonnement. Le serveur n'enregistre ni tes questions ni ses réponses : il garde seulement un compteur de demandes par jour et par abonnement, effacé au bout de deux jours.</li>
+<li><strong>Sol en ligne</strong> (gratuit pour tous, sans compte ni clé ; plus généreux pour les abonnés YET+, « Sol+ ») : tes questions à Sol et le contexte nécessaire (tes envies, ta ville approximative, la météo) sont envoyés au serveur de YET, hébergé par Cloudflare, puis au modèle d'IA qui répond (Cloudflare Workers AI). Chaque demande porte un identifiant anonyme de l'installation de l'app (un numéro aléatoire, sans lien avec toi) et, pour les abonnés, la preuve d'achat signée par l'App Store. Le serveur n'enregistre ni tes questions ni ses réponses : il garde seulement des compteurs de demandes par jour (par installation, par abonnement et par adresse IP), effacés au bout de deux jours.</li>
 <li><strong>IA avec ta propre clé</strong> (Claude, ChatGPT, Gemini, Mistral, Groq, Grok, DeepSeek, OpenRouter) : seulement si tu ajoutes une clé. Les mêmes informations sont alors envoyées directement au fournisseur que tu as choisi, selon ses propres conditions. L'éditeur ne les voit pas.</li>
 </ul>
 <p>Quel que soit le moteur, un garde-fou sur l'iPhone bloque les contenus dangereux ; en cas de détresse, Sol donne les numéros d'aide (3114, 112).</p>
@@ -56,7 +56,7 @@
 <p>L'abonnement (0,99 € par mois) est géré entièrement par Apple : l'éditeur ne reçoit ni ton nom ni tes coordonnées bancaires. L'app vérifie l'abonnement auprès de l'App Store sur l'iPhone. YET+ retire les publicités et donne accès à Sol+.</p>
 
 <h2>Partage</h2>
-<p>L'éditeur ne vend, ne loue et ne partage aucune donnée personnelle. Les seuls tiers qui en traitent sont ceux décrits ci-dessus (Apple, Google AdMob pour la version gratuite, Cloudflare et le modèle d'IA pour Sol+, et le fournisseur d'IA que tu choisis avec ta propre clé).</p>
+<p>L'éditeur ne vend, ne loue et ne partage aucune donnée personnelle. Les seuls tiers qui en traitent sont ceux décrits ci-dessus (Apple, Google AdMob pour la version gratuite, Cloudflare pour Sol en ligne, et le fournisseur d'IA que tu choisis avec ta propre clé).</p>
 
 <h2>Tes droits</h2>
 <p>Tu peux tout effacer à tout moment : supprime des envies dans l'app, supprime le mini-Sol dans les réglages de Sol, supprime l'app, et gère les données iCloud dans Réglages → [ton nom] → iCloud. Tu peux retirer ton consentement publicitaire dans les réglages de Sol et le suivi dans Réglages → Confidentialité et sécurité → Suivi. Pour toute question, voir la <a href="index.html">page d'assistance</a>.</p>
