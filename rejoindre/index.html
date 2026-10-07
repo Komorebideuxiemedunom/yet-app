@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YET – Rejoins ma liste</title>
+<meta property="og:title" content="Rejoins ma liste sur YET">
+<meta property="og:description" content="Une liste d'envies à vivre ensemble : chacun ajoute des idées et coche ce qui est fait.">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .card { margin-top: 24px; padding: 24px; border-radius: 20px; background: color-mix(in srgb, var(--accent) 10%, transparent); }
+  .button { display: inline-block; margin-top: 12px; padding: 14px 22px; border-radius: 14px; background: var(--accent); color: #fff; font-weight: 600; text-decoration: none; }
+  .code { font: 700 2rem ui-monospace, Menlo, monospace; letter-spacing: .2em; margin: 8px 0; }
+</style>
+</head>
+<body>
+<main>
+<p class="back"><a href="../index.html">← YET</a></p>
+<h1>On t'invite dans une liste YET 👯</h1>
+<p>Une liste d'envies à vivre ensemble : chacun ajoute des idées, coche ce qui est fait et partage ses photos.</p>
+
+<div class="card">
+  <p><strong>Tu as déjà YET ?</strong></p>
+  <a id="open" class="button" href="yet://rejoindre">Ouvrir dans YET</a>
+  <p class="meta">Si rien ne s'ouvre : YET → onglet Ensemble → « Rejoindre avec un code ».</p>
+  <p class="code" id="code"></p>
+</div>
+
+<div class="card">
+  <p><strong>Pas encore YET ?</strong> Installe-le, puis reviens sur ce lien et touche « Ouvrir dans YET ».</p>
+  <a class="button" href="https://testflight.apple.com/join/rvSBcTfW">Installer YET</a>
+</div>
+
+<p class="meta">Pour rejoindre, tu te connectes avec Apple (ton e-mail peut rester masqué). <a href="../confidentialite.html">Confidentialité</a></p>
+</main>
+<script>
+  // ?code=ABC234 → yet://rejoindre?code=ABC234, puis ouverture directe de l'app si elle est installée.
+  var code = (new URLSearchParams(location.search).get("code") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+  var link = document.getElementById("open");
+  if (code.length === 6) {
+    link.href = "yet://rejoindre?code=" + code;
+    document.getElementById("code").textContent = code;
+    setTimeout(function () { location.href = link.href; }, 400);
+  } else {
+    link.removeAttribute("href");
+    link.textContent = "Lien incomplet : redemande-le à la personne qui t'a invité";
+  }
+</script>
+</body>
+</html>
